@@ -1,0 +1,16 @@
+[
+    {
+      "id": 1,
+      "name": "Alan Velazquez",
+      "area": "VEV",
+      "role": "Test Engineer",
+      "salary": "25000"
+    },
+    {
+        "id": 2,
+        "name": "Eder Mancera",
+        "area": "D&R",
+        "role": "Test Engineer",
+        "salary": "15000"
+      }
+]
