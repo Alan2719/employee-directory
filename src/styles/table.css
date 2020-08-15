@@ -1,0 +1,12 @@
+table {
+    width: 40%;
+    border-bottom: 1px solid black;
+}
+
+th, tbody {
+    text-align: center;
+}
+
+button {
+    border: none;
+}
