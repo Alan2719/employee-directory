@@ -78,7 +78,7 @@ class DataArea extends Component {
                     handleInputChange = {this.handleInputChange}
                 />
                     <table className="table">
-                        <thead>
+                        <thead className="thead-dark">
                             <tr>
                                 <th>Image</th>
                                 <th>Name<button onClick={this.handleSort}><i className="fas fa-arrows-alt-v"></i></button></th>

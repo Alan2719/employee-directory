@@ -9,4 +9,18 @@ th, tbody {
 
 button {
     border: none;
+    background-color: transparent;
+    margin: 5px;
 }
+
+.fa-arrows-alt-v {
+    color: white;
+}
+
+tr:nth-child(even) {
+    background-color: rgb(217, 248, 222);
+  }
+
+  tr {
+    border-bottom: solid 2px black;
+  }
