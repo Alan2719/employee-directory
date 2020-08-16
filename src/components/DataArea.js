@@ -16,7 +16,7 @@ class DataArea extends Component {
 
     handleSort = () => {
         if(this.state.order === "desc") {
-            const sortedEmployees = this.state.employees.sort(function(a,b) {
+            const sortedEmployees = this.state.filteredEmployees.sort(function(a,b) {
                 if(a.name.first.toLowerCase() > b.name.first.toLowerCase()) {
                     return -1
                 }
@@ -24,14 +24,14 @@ class DataArea extends Component {
                     return 1
                 }
                 return 0
-            })
+            });
             this.setState({
                 order: "asc",
-                employees: sortedEmployees  
-            })
+                filteredEmployees: sortedEmployees  
+            });
         }
         if(this.state.order === "asc") {
-            const sortedEmployees =  this.state.employees.sort(function(a,b) {
+            const sortedEmployees =  this.state.filteredEmployees.sort(function(a,b) {
                 if(a.name.first.toLowerCase() < b.name.first.toLowerCase()) {
                     return -1
                 }
@@ -39,11 +39,11 @@ class DataArea extends Component {
                     return 1
                 }
                 return 0
-            })
+            });
             this.setState({
                 order: "desc",
-                employees: sortedEmployees   
-            })
+                filteredEmployees: sortedEmployees   
+            });
         }
     }
 
@@ -56,9 +56,9 @@ class DataArea extends Component {
         const filteredEmployees = allEmployees.filter(employee => 
             employee.name.first.toLowerCase().indexOf(search) > -1);
         console.log(filteredEmployees);
-        this.setState = {
-            filteredEmployees
-        }
+        this.setState({
+            filteredEmployees: filteredEmployees
+        })
     }
 
     componentDidMount() {
@@ -75,7 +75,6 @@ class DataArea extends Component {
         return(
             <div className="container-fluid">
                 <Search 
-                    employees = {this.state.employees}
                     handleInputChange = {this.handleInputChange}
                 />
                     <table className="table">
